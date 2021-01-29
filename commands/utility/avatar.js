@@ -5,6 +5,7 @@ module.exports = {
   name: "avatar",
   aliases: ["icon", "pfp"],
   category: "Fun",
+  group: "utility",
   description: "Return A User Avatar!",
   usage: "Avatar | <Mention Or ID>",
   run: async (client, message, args) => {
