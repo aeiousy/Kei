@@ -8,7 +8,7 @@ module.exports = {
   cooldown: { time: 30000 },
   clientPermissions: [ ],
   group: 'bot',
-  description: 'Sends support message to this bot\'s owner (SakurajiKei#6742)',
+  description: 'Sends support message to the bots owner',
   parameters: ['Feedback Message'],
   get examples(){ return [ this.name, ...this.aliases ].map(x => x + ' ' + '[complaints, bugs, issues, feature requests, etc]'); },
   run: async function run(client, message, args ){
@@ -26,7 +26,7 @@ module.exports = {
     const owner = await client.users.fetch('545427431662682112').catch(() => null);
 
     if (!owner){
-      return message.channel.send(`Couldn't contact SakurajiKei#6742!`);
+      return message.channel.send(`Couldn't contact <username>`);
     };
 
     return owner.send(
@@ -56,6 +56,6 @@ module.exports = {
         ].join('\n')
       })
     ).then(() => message.react('✅')).catch(() => message.channel.send('✅ Feedback Sent!'))
-    .catch(err => message.channel.send(`SakurajiKei#6702 is currently not accepting any Feedbacks right now via DMs. You might to join my support server instead or make an issue on my github repo to directly address your issue.`));
+    .catch(err => message.channel.send(`<username> is currently not accepting any Feedbacks right now via DMs. You might to join my support server instead or make an issue on my github repo to directly address your issue.`));
   }
 };
