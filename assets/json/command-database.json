@@ -32,6 +32,21 @@
     ]
   },
   {
+    "name": "dance",
+    "aliases": [],
+    "guildOnly": true,
+    "clientPermissions": [
+      "EMBED_LINKS",
+      "ADD_REACTIONS"
+    ],
+    "group": "action",
+    "description": "Dance dance untill your dead",
+    "parameters": [],
+    "examples": [
+      "dance"
+    ]
+  },
+  {
     "name": "disgust",
     "aliases": [],
     "guildOnly": true,
@@ -163,6 +178,21 @@
     ]
   },
   {
+    "name": "nom",
+    "aliases": [],
+    "guildOnly": true,
+    "clientPermissions": [
+      "EMBED_LINKS",
+      "ADD_REACTIONS"
+    ],
+    "group": "action",
+    "description": "nom nom",
+    "parameters": [],
+    "examples": [
+      "nom"
+    ]
+  },
+  {
     "name": "pat",
     "aliases": [
       "headpat"
@@ -196,6 +226,21 @@
     ],
     "examples": [
       "poke @user"
+    ]
+  },
+  {
+    "name": "punch",
+    "aliases": [],
+    "guildOnly": true,
+    "clientPermissions": [
+      "EMBED_LINKS",
+      "ADD_REACTIONS"
+    ],
+    "group": "action",
+    "description": "Punch someone in the face",
+    "parameters": [],
+    "examples": [
+      "punch"
     ]
   },
   {
@@ -265,6 +310,31 @@
     "examples": [
       "tickle @user"
     ]
+  },
+  {
+    "name": "wave",
+    "aliases": [],
+    "guildOnly": true,
+    "clientPermissions": [
+      "EMBED_LINKS",
+      "ADD_REACTIONS"
+    ],
+    "group": "action",
+    "description": "Say hi or goodbye",
+    "parameters": [],
+    "examples": [
+      "wave"
+    ]
+  },
+  {
+    "name": "aavatar",
+    "category": "anime",
+    "aliases": [
+      "apfp"
+    ],
+    "group": "anime",
+    "description": "Send a Anime avatar",
+    "usage": ""
   },
   {
     "name": "alprofile",
@@ -386,6 +456,12 @@
       "anirand",
       "anirecommend"
     ]
+  },
+  {
+    "name": "awallpaper",
+    "description": "Get a anime wallpaper",
+    "group": "anime",
+    "category": "animals"
   },
   {
     "name": "character",
@@ -809,36 +885,25 @@
   },
   {
     "name": "help",
-    "aliases": [],
+    "aliases": [
+      "hello",
+      "hi",
+      "hey",
+      "moshimoshi",
+      "konnichiwa"
+    ],
     "group": "core",
-    "description": "Displays basic information or a help for a command",
+    "description": "Displays basic information or help for a command!",
     "clientPermissions": [
-      "EMBED_LINKS"
+      "EMBED_LINKS",
+      "ADD_REACTIONS"
     ],
     "parameters": [
-      "Command Name/Alias"
+      "command name"
     ],
     "examples": [
       "help anime",
-      "help discover",
-      "help upcoming",
-      "help commands"
-    ]
-  },
-  {
-    "name": "Kei",
-    "aliases": [
-      "bestgirl"
-    ],
-    "group": "core",
-    "description": "Kei is the best girl and there's no denying it!",
-    "clientPermissions": [
-      "EMBED_LINKS",
-      "ATTACH_FILES"
-    ],
-    "examples": [
-      "Kei",
-      "bestgirl"
+      "hey"
     ]
   },
   {
@@ -918,6 +983,11 @@
     ]
   },
   {
+    "name": "ascii",
+    "description": "Converts text to ascii",
+    "group": "fun"
+  },
+  {
     "name": "birdfacts",
     "aliases": [
       "birdfact",
@@ -966,6 +1036,21 @@
     ],
     "examples": [
       "comment"
+    ]
+  },
+  {
+    "name": "deadchat",
+    "aliases": [
+      "ddc"
+    ],
+    "group": "fun",
+    "description": "dead chat huh.",
+    "clientPermissions": [
+      "EMBED_LINKS"
+    ],
+    "examples": [
+      "deadchat",
+      "ddc"
     ]
   },
   {
@@ -2289,18 +2374,12 @@
   {
     "name": "avatar",
     "aliases": [
-      "av",
-      "pfp",
-      "displayprofile"
+      "icon",
+      "pfp"
     ],
-    "clientPermissions": [
-      "EMBED_LINKS"
-    ],
-    "group": "utility",
-    "description": "Shows avatar of the provided user, or yourself",
-    "parameters": [
-      "User Mention / ID"
-    ]
+    "category": "Fun",
+    "description": "Return A User Avatar!",
+    "usage": "Avatar | <Mention Or ID>"
   },
   {
     "name": "color",
