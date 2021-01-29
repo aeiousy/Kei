@@ -37,7 +37,7 @@ module.exports = class KeiClient extends Client{
      * @type {?string}
      */
     if (typeof settings.prefix !== 'string'){
-      settings.prefix = 'm!';
+      settings.prefix = 'Kei';
     };
 
     if (!this.token && 'TOKEN' in process.env){
