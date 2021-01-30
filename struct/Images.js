@@ -126,6 +126,15 @@ module.exports = class ImageGenerator{
   };
 
   /**
+  * Grab an action image of type `kiss`
+  * Has an imgur hash `3ZIkRhL`
+  * @returns {URL} An image url
+  */
+ rickroll(){
+  return this._action('rickroll');
+};
+
+  /**
   * Grab an action image of type `lick`
   * @returns {URL} An image url
   */
