@@ -46,7 +46,7 @@ module.exports = {
     data.stats = data.stats || {};
     data.family.evolutionLine = data.family.evolutionLine || [];
 
-    embed.setColor('GREY')
+    embed.setColor('#fa95b1')
     .setDescription('')
     .setThumbnail(data.sprites.animated || data.sprites.normal || null)
     .setAuthor(`Pokédex entry #${data.id} ${data.name.toUpperCase()}`,'https://i.imgur.com/uljbfGR.png', 'https://pokemon.com/us')

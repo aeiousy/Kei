@@ -10,7 +10,7 @@ module.exports = {
   get examples(){ return [this.name, ...this.aliases ];},
   run: async (client, message) => message.channel.send(
     new MessageEmbed()
-    .setColor('GREY')
+    .setColor('#fa95b1')
     .setAuthor(`💮 ${message.guild.name} Roles List`)
     .setFooter(`Listrole | \©️${new Date().getFullYear()} Kei`)
     .addFields(

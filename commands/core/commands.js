@@ -29,7 +29,7 @@ module.exports = {
 
     return message.channel.send(
       new MessageEmbed()
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .addFields(fields.sort((A,B) => B.value.length - A.value.length))
       .setAuthor('Kei\'s full list of commands!')
       .setFooter(`Command List | \©️${new Date().getFullYear()} Kei`)

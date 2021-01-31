@@ -20,7 +20,7 @@ module.exports = {
 
     return message.channel.send(
       new MessageEmbed()
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .setAuthor(`${data.category} Joke`)
       .setThumbnail('https://i.imgur.com/KOZUjcc.gif')
       .setFooter(`Joke | \©️${new Date().getFullYear()} Kei`)

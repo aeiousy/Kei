@@ -52,7 +52,7 @@ module.exports = {
             tags, pages, uploaded, cover } = book
 
     const embed = new MessageEmbed()
-    .setColor('GREY')
+    .setColor('#fa95b1')
     .setFooter(`Doujin Query | \©️${new Date().getFullYear()} Kei`)
     .setAuthor(pretty, null, `https://nhentai.net/g/${id}`)
     .setDescription(`**${book.title.english}**\n*${book.title.japanese}*`)

@@ -17,7 +17,7 @@ module.exports = {
     return message.channel.send(
       new MessageEmbed()
       .setDescription(`${message.author} is happy.`)
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .setImage(client.images.happy())
       .setFooter(`Action Commands | \©️${new Date().getFullYear()} Kei`)
     );

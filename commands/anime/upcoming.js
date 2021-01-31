@@ -68,7 +68,7 @@ module.exports = {
     for (const anime of descriptions){
       pages.add(
         new MessageEmbed()
-        .setColor('GREY')
+        .setColor('#fa95b1')
         .setAuthor(`Upcoming Anime List\u2000|\u2000Type: ${type || 'ALL'}`)
         .setDescription(anime.join('\n\n'))
         .setFooter([

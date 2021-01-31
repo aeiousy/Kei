@@ -17,7 +17,7 @@ module.exports = {
     return message.channel.send(
       new MessageEmbed()
       .setDescription(`${message.author} smugs.`)
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .setImage(client.images.smug())
       .setFooter(`Action Commands | \©️${new Date().getFullYear()} Kei`)
     );

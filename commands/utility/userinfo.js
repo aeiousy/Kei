@@ -35,7 +35,7 @@ module.exports = {
 
     return message.channel.send(
       new MessageEmbed()
-      .setColor(member.displayColor || 'GREY')
+      .setColor(member.displayColor || '#fa95b1')
       .setAuthor(`Discord user ${user.tag}`, null, 'https://discord.com/')
       .setDescription(userFlags.join(' '))
       .setThumbnail(user.displayAvatarURL({format: 'png', dynamic: true}))

@@ -31,7 +31,7 @@ module.exports = {
 
     return message.channel.send(
       new MessageEmbed()
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .setFooter(`Time  | \©️${new Date().getFullYear()} Kei`)
       .setAuthor(`Time.is`,'https://files.catbox.moe/5iolld.png','https://time.is')
       .setTitle(`${moment(time, 'HH:mm:ss').format('h:mm:ss A')}`)

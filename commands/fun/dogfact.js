@@ -21,7 +21,7 @@ module.exports = {
     return message.channel.send(
       new MessageEmbed()
       .setThumbnail('https://i.imgur.com/oTVVqHQ.gif')
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .setDescription(data.facts)
       .setFooter(`Dogfact | \©️${new Date().getFullYear()} Kei`)
     );

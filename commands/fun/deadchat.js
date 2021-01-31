@@ -12,7 +12,7 @@ module.exports = {
     const rep = await message.channel.send(
       new MessageEmbed()
       .setTitle("Dead Chat")
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .setImage("https://mma.prnewswire.com/media/951563/Automotive_Website_Chat_is_DEAD.jpg?p=publish")
     );
 

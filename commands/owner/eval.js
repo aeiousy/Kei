@@ -44,7 +44,7 @@ module.exports = {
         color = 'RED'
         type = 'Promise (Rejected)'
       } else {
-        color = 'GREY'
+        color = '#fa95b1'
         type = (typeof raw).charAt(0).toUpperCase() + (typeof raw).slice(1)
       };
 

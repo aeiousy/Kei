@@ -22,7 +22,7 @@ module.exports = async (options) => {
 
   const build = () => {
     const embed = new MessageEmbed()
-    .setColor('GREY')
+    .setColor('#fa95b1')
     .setAuthor('ANIME HANGMAN', hasEnded ? null : 'attachment://timer.gif')
     .setDescription('Guess the word (anime title)')
     .setFooter(`Game: Hangman | \©️${new Date().getFullYear()} Kei`)

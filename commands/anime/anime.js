@@ -54,7 +54,7 @@ module.exports = {
     
     return message.channel.send(
       new MessageEmbed()
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .setThumbnail(data.picture || null)
       .setFooter(`Anime Query with MAL | \©️${new Date().getFullYear()} Kei`)
       .setAuthor([

@@ -52,7 +52,7 @@ module.exports = {
 
     return message.channel.send(
       new MessageEmbed()
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .setFooter(`MALProfile | \©️${new Date().getFullYear()} Kei`)
       .setAuthor(`${response.username}'s Profile`, response.image_url, response.url)
       .setDescription([

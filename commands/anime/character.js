@@ -75,7 +75,7 @@ module.exports = {
 
     embed.setAuthor(`${res.name} ${res.name_kanji ? `• ${res.name_kanji}` : ''}`, null, res.url)
     .setThumbnail(res.image_url)
-    .setColor('GREY')
+    .setColor('#fa95b1')
     .setDescription(text.truncate(res.about.replace(/\\n/g,''),500,`... [Read More](${res.url})`))
     .setFooter(  `Character Query with MAL | \©️${new Date().getFullYear()} Kei`)
     .addFields([

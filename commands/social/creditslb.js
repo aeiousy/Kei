@@ -74,7 +74,7 @@ module.exports = {
 
       return message.channel.send(
         new MessageEmbed()
-        .setColor('GREY')
+        .setColor('#fa95b1')
         .setFooter(`Credits Leaderboard | \©️${new Date().getFullYear()} Kei`)
         .setAuthor(`🏆 ${message.guild.name} Credits Leaderboard`, message.guild.iconURL({format: 'png', dynamic: true }) || null)
         .addField(`**${members.get(docs[0].id)?.displayName || '<Unknown User>'}** ranked the highest with **${text.commatize(docs[0].wallet + docs[0].bank)} **Credits!`,

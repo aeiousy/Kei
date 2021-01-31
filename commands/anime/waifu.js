@@ -23,7 +23,7 @@ module.exports = {
     message.channel.startTyping();
 
     const embed = new MessageEmbed()
-    .setColor('GREY')
+    .setColor('#fa95b1')
     .setAuthor([ waifu.names.en, waifu.names.jp ].filter(Boolean).join('\u2000•\u2000'))
     .setDescription([ waifu.names.alt, waifu.from.type].filter(Boolean).join('\n'))
     .attachFiles([{ attachment: waifu.images[no], name: 'waifu.jpg'}])

@@ -21,7 +21,7 @@ module.exports = {
 
     const pages = new Pages(_.chunk(selected, 24).map((chunk, i, o) => {
       return new MessageEmbed()
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .setTitle('Kei\'s Market')
       .setDescription('You can view all of the items in the market at once on https://market.Kei-san.ml/')
       .setFooter(`Market | \©️${new Date().getFullYear()} Kei\u2000\u2000•\u2000\u2000Page ${i+1} of ${o.length}`)

@@ -1,4 +1,4 @@
-const Color = "GREY";
+const Color = "#fa95b1";
 const Discord = require("discord.js");
 
 module.exports = {

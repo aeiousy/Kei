@@ -15,7 +15,7 @@ module.exports = {
 
     return message.channel.send(
       new MessageEmbed()
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .setImage('https://cdn.discordapp.com/emojis/' + emoji.match(/\d{17,19}/)[0])
       .setFooter(`Emoji: ${emoji.match(/\w{2,32}/)[0]} | \©️${new Date().getFullYear()} Kei`)
     );

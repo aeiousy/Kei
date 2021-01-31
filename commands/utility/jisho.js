@@ -49,7 +49,7 @@ module.exports = {
 
     return message.channel.send(
       new MessageEmbed()
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .addFields(fields)
       .setAuthor(`🇯🇵 • Search Results for ${query}!`)
       .setFooter(`Jisho @ Jisho.org | \©️${new Date().getFullYear()} Kei`)

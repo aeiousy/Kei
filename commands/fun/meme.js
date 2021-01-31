@@ -20,7 +20,7 @@ module.exports = {
 
     return message.channel.send(
       new MessageEmbed()
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .setImage(data.url)
       .setAuthor(data.title, null, data.postLink)
       .setFooter(`${data.subreddit}:Meme | \©️${new Date().getFullYear()} Kei`)

@@ -16,7 +16,7 @@ module.exports = {
   , run: async ( client, message, args ) => {
 
     return message.channel.send( new MessageEmbed()
-    .setColor('GREY')
+    .setColor('#fa95b1')
     .setDescription(`nom nom`)
     .setImage(client.images.nom()))
     .setFooter(`Action Commands | \©️${new Date().getFullYear()} Kei`)

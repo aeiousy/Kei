@@ -16,7 +16,7 @@ module.exports = {
 
     return message.channel.send(
       new MessageEmbed()
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .setDescription(`${message.member} started crying!`)
       .setImage(client.images.cry())
       .setFooter(`Action Commands | \©️${new Date().getFullYear()} Kei`)

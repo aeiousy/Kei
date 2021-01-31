@@ -18,7 +18,7 @@ module.exports = {
     return message.channel.send(
       new MessageEmbed()
       .setDescription(`${message.author} just committed a suicide. Horrible.`)
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .setImage(client.images.suicide())
       .setFooter(`Action Commands | \©️${new Date().getFullYear()} Kei`)
     );

@@ -65,7 +65,7 @@ module.exports = {
 
     const discoveryPages = new Paginate(
       new MessageEmbed()
-      .setColor('GREY')
+      .setColor('#fa95b1')
       .setTitle(`Get Random ${topic} Recommendations with your Discovery Queue!`)
       .setThumbnail(message.author.displayAvatarURL({ format: 'png', dynamic: true }))
       .setDescription([
@@ -94,7 +94,7 @@ module.exports = {
     for (const info of data){
       discoveryPages.add(
         new MessageEmbed()
-        .setColor(info.coverImage.color || 'GREY')
+        .setColor(info.coverImage.color || '#fa95b1')
         .setAuthor([
           profile[category].genres[index],
           text.truncate(info.title.romaji || info.title.english || info.title.native),

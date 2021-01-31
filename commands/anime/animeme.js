@@ -92,7 +92,7 @@ async function reloadMeme(memes,message){
 
 function embedMeme({ title, ups, downs, link, image, timestamp }){
   return new MessageEmbed()
-  .setColor('GREY')
+  .setColor('#fa95b1')
   .setTitle(title)
   .setURL(link)
   .setImage(image)
