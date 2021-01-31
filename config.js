@@ -7,7 +7,7 @@ const settings = {
       activity: {
         name: 'Kei help | keibot.xyz',
         type: 'STREAMING',
-        url: 'https://twitch.tv/idk'
+        url: 'https://twitch.tv/idlk'
       }
     }
   },
