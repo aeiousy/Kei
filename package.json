@@ -1,5 +1,5 @@
 {
-  "name": "mai",
+  "name": "kei",
   "version": "4.0.5",
   "description": "Discordbot written in discord.js",
   "main": "index.js",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maisans-maid"
+    "url": "https://github.com/aeiousy"
   },
   "keywords": [
     "discord",
     "discord.js",
     "discord bot"
   ],
-  "author": "Sakurajimai#6742",
+  "author": "aeiousy#4774",
   "license": "MIT",
   "dependencies": {
     "@top-gg/sdk": "^3.0.5",

@@ -38,7 +38,7 @@ module.exports = {
     } else {
 
       return message.channel.send(
-        embed.setDescription(`${args[0]} GE RICK ROLLED BOI!`)
+        embed.setDescription(`${args[0]} GET RICK ROLLED BOI!`)
       );
 
     };
