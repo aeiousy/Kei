@@ -1,7 +1,7 @@
 const { ShardingManager } = require("discord.js");
  
 const shards = new ShardingManager("./index.js", {
-    token: "NzAyNzk0OTY3NDAzNDYyNjU2.XqFO0Q.OdnfUEFGNIFli5RtYU3AnWejGYA", // If your token was inside .env, use process.env
+    token: "NzAyNzk0OTY3NDAzNDYyNjU2.XqFO0Q.Bf7AixQUuedxeJKowv1mxxQljCI", // If your token was inside .env, use process.env
     totalShards: "auto"
 });
  
