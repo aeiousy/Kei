@@ -20,7 +20,7 @@ module.exports = {
 
     return message.channel.send(
       new MessageEmbed()
-      .setColor(`#fa95b1`)
+      .setColor(`GREY`)
       .addField(`*Quoted from ${anime}*`,`${quote}\n\n-*${name}*`)
       .setImage(image)
       .setTimestamp()

@@ -55,7 +55,7 @@ module.exports = {
 
     const post = res[Math.floor(Math.random() * res.length)].data;
 
-    embed.setColor('#fa95b1')
+    embed.setColor('GREY')
     .setDescription('')
     .setImage(post.url)
     .setTimestamp(post.created_utc * 1000)

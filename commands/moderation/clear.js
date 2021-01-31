@@ -48,7 +48,7 @@ module.exports = {
       return message.channel.send(
         `Successfully deleted **${count}** messages from this channel!`,
         new MessageEmbed()
-        .setColor('#fa95b1')
+        .setColor('GREY')
         .setDescription([
           `[\`📄 View\`](${url ? `https://txt.discord.website/?txt=${url}/${id}/bulkdlt-${_id}`:''})`,
           `[\`📩 Download\`](${res[0]})`

@@ -23,7 +23,7 @@ module.exports = {
               message.author.displayAvatarURL({ format: "png", dynamic: true })
             )
 
-            .setColor("#fa95b1")
+            .setColor("GREY")
 
             .setThumbnail(
               client.user.displayAvatarURL({ format: "png", dynamic: true })
@@ -46,7 +46,7 @@ module.exports = {
       return message.channel
         .send(
           new MessageEmbed()
-            .setColor("#fa95b1")
+            .setColor("GREY")
             .setDescription(
               `\u200B\nSorry, I couldn't find **${query}** in the commands list!\n\u200B`
             )
@@ -77,7 +77,7 @@ module.exports = {
           message.author.displayAvatarURL({ format: "png", dynamic: true })
         )
 
-        .setColor("#fa95b1")
+        .setColor("GREY")
 
         .setDescription(description)
 

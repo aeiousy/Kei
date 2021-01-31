@@ -27,7 +27,7 @@ module.exports = {
 
     return message.channel.send(
       new MessageEmbed()
-      .setColor(member.displayColor || '#fa95b1')
+      .setColor(member.displayColor || 'GREY')
       .setTitle(`${member.displayName}'s Permissions`)
       .setFooter(`Permissions | \©️${new Date().getFullYear()} Kei`)
       .setDescription([

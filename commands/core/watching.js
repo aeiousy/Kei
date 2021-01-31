@@ -73,7 +73,7 @@ module.exports = {
 
       const pages = new Page(descriptions.map((d,i) => {
         return new MessageEmbed()
-        .setColor('#fa95b1')
+        .setColor('GREY')
         .setDescription(d)
         .setTitle(`Current Anischedule Subscription (${entries.length} entries!)`)
         .setFooter([

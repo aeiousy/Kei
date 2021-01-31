@@ -16,7 +16,7 @@ module.exports = {
   , run: async ( client, message, args ) => {
 
     return message.channel.send( new MessageEmbed()
-    .setColor('#fa95b1')
+    .setColor('GREY')
     .setDescription(`wave.`)
     .setImage(client.images.wave())
     .setFooter(`Action Commands | \©️${new Date().getFullYear()} Kei`)

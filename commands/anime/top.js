@@ -106,7 +106,7 @@ module.exports = {
 
     for (const info of res){
       const embed = new MessageEmbed()
-      .setColor('#fa95b1')
+      .setColor('GREY')
       .setAuthor(`MyAnimeList Top ${type.charAt(0).toUpperCase() + type.slice(1)}`)
       .setURL(info.url)
       .setTitle(`#${info.rank}\u2000\u2000|\u2000\u2000${info.title}${info.name_kanji ? ` (${info.name_kanji})` : ''}\u2000\u2000|\u2000\u2000${info.type || ''}`)

@@ -9,7 +9,7 @@ module.exports = {
 
 
         const invite = new Discord.MessageEmbed()
-        .setColor("#fa95b1")
+        .setColor("GREY")
         .setDescription("https://discord.com/api/oauth2/authorize?client_id=702794967403462656&permissions=8&scope=bot");
 
 

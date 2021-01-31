@@ -68,7 +68,7 @@ module.exports = {
 
     const elapsed = Date.now() - message.createdTimestamp;
 
-    embed.setColor('#fa95b1')
+    embed.setColor('GREY')
     .setThumbnail(res.data.Staff.image.large)
     .setAuthor([
       res.data.Staff.name.full,

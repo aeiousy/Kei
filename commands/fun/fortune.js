@@ -10,7 +10,7 @@ module.exports = {
   get examples(){ return [ this.name, ...this.aliases]; },
   run: (client, message) => message.channel.send(
     new MessageEmbed()
-    .setColor('#fa95b1')
+    .setColor('GREY')
     .setAuthor(message.author.tag)
     .setFooter(`Fortune | \©️${new Date().getFullYear()} Kei`)
     .setDescription(fortunes[Math.floor(Math.random() * fortunes.length)])

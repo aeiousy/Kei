@@ -20,7 +20,7 @@ module.exports = {
     const url = client.images.lick();
     const disgust = client.images.disgust();
     const embed = new MessageEmbed()
-    .setColor('#fa95b1')
+    .setColor('GREY')
     .setImage(url)
     .setFooter(`Action Commands | \©️${new Date().getFullYear()} Kei`);
 

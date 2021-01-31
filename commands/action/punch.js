@@ -11,7 +11,7 @@ module.exports = {
   run: async (client, message, args) => {
     return message.channel.send(
       new MessageEmbed()
-        .setColor("#fa95b1")
+        .setColor("GREY")
         .setDescription(`${message.mentions.members.first()} got punched by ${message.member}! rip!`)
         .setImage(client.images.punch())
         .setFooter(`Action Commands | \©️${new Date().getFullYear()} Kei`

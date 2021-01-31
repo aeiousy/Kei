@@ -59,7 +59,7 @@ module.exports = {
     for ( const info of res[day] ){
       pages.add(
         new MessageEmbed()
-        .setColor('#fa95b1')
+        .setColor('GREY')
         .setThumbnail(info.image_url)
         .setDescription([
           `${info.score ? `**Score**:\u2000${info.score}\n`: ''}`,

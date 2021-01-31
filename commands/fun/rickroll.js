@@ -19,7 +19,7 @@ module.exports = {
 
     const url = client.images.rickroll();
     const embed = new MessageEmbed()
-    .setColor('#fa95b1')
+    .setColor('GREY')
     .setImage(url)
     .setFooter(`RickRoll | \©️${new Date().getFullYear()} Kei`);
 

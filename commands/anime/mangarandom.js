@@ -66,7 +66,7 @@ module.exports = {
     };
 
     return message.channel.send(
-      embed.setColor(data.Media.coverImage.color || '#fa95b1')
+      embed.setColor(data.Media.coverImage.color || 'GREY')
       .setAuthor([
         text.truncate(data.Media.title.romaji || data.Media.title.english || data.Media.title.native),
         client.anischedule.info.mediaFormat[data.Media.format]

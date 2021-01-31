@@ -18,7 +18,7 @@ module.exports = async client => {
   const boot = client.bootTime;
   const message = `${icon} \`[ ${client.version.client} ]\` **REBOOT**`;
   const embed = {
-    color: '#fa95b1',
+    color: 'GREY',
     description: [
       '```properties',
       `Servers: ${servers}`,

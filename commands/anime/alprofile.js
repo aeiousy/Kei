@@ -40,7 +40,7 @@ module.exports = {
 
     return message.channel.send(
       new MessageEmbed()
-      .setColor('#fa95b1')
+      .setColor('GREY')
       .setImage(response.data.User.bannerImage)
       .setThumbnail(response.data.User.avatar.medium)
       .setAuthor(response.data.User.name, null, response.data.User.siteUrl)

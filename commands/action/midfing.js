@@ -21,7 +21,7 @@ module.exports = {
     const baka = client.images.baka();
 
     const embed = new MessageEmbed()
-    .setColor('#fa95b1')
+    .setColor('GREY')
     .setFooter(`Action Commands | \©️${new Date().getFullYear()} Kei`);
 
     if (!message.mentions.members.size){

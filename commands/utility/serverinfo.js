@@ -10,7 +10,7 @@ module.exports = {
   get examples(){ return [ this.name, ...this.aliases ];},
   run: async (client, message) => message.channel.send(
     new MessageEmbed()
-    .setColor('#fa95b1')
+    .setColor('GREY')
     .setAuthor(`♨️ ${message.guild.name} Server Information`, message.guild.iconURL())
     .setFooter(`Server | ©️${new Date().getFullYear()} Kei`)
     .addFields([

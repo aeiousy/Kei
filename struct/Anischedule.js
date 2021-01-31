@@ -99,7 +99,7 @@ module.exports = class Anischedule{
     }).join(' • ');
 
     return new MessageEmbed()
-    .setColor(parseInt((entry.media.coverImage.color || '').substr(1), 16) || '#fa95b1')
+    .setColor(parseInt((entry.media.coverImage.color || '').substr(1), 16) || 'GREY')
     .setThumbnail(entry.media.coverImage.large)
     .setAuthor('Kei Anischedule')
     .setTimestamp(date)

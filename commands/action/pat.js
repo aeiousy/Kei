@@ -19,7 +19,7 @@ module.exports = {
 
     const url = client.images.pat();
     const embed = new MessageEmbed()
-    .setColor('#fa95b1')
+    .setColor('GREY')
     .setImage(url)
     .setFooter(`Action Commands | \©️${new Date().getFullYear()} Kei`);
 

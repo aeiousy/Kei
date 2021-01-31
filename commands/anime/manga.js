@@ -63,7 +63,7 @@ module.exports = {
       pages.add(
         new MessageEmbed()
         .setAuthor(res.title, res.image_url, res.url)
-        .setColor('#fa95b1')
+        .setColor('GREY')
         .setThumbnail(res.image_url)
         .setFooter([
           `Search duration: ${Math.abs(elapsed / 1000).toFixed(2)} seconds`,

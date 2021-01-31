@@ -9,7 +9,7 @@ module.exports = {
 
 
         const ping = new Discord.MessageEmbed()
-        .setColor("#fa95b1")
+        .setColor("GREY")
         .setDescription(`🏓\`${Date.now() - message.createdTimestamp}\`ms`);
 
 

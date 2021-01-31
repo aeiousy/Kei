@@ -25,7 +25,7 @@ module.exports = {
     if (data.lyrics.length < 2000){
       return message.channel.send(
         new MessageEmbed()
-        .setColor('#fa95b1')
+        .setColor('GREY')
         .setDescription(data.lyrics)
         .setThumbnail(data.thumbnail.genius)
         .setFooter(`Lyrics | \©️${new Date().getFullYear()} Kei`)
@@ -49,7 +49,7 @@ module.exports = {
     const pages = new Page(
       lyrics_subarray.map((x,i) =>
         new MessageEmbed()
-        .setColor('#fa95b1')
+        .setColor('GREY')
         .setDescription(x)
         .setThumbnail(data.thumbnail.genius)
         .setFooter([

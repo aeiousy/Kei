@@ -14,7 +14,7 @@ module.exports = {
   run: async ( client, message, args ) => {
     return message.channel.send(
       new MessageEmbed()
-      .setColor('#fa95b1')
+      .setColor('GREY')
       .setDescription(`${message.member} started dancing!`)
       .setImage(client.images.dance())
       .setFooter(`Action Commands | \©️${new Date().getFullYear()} Kei`)
