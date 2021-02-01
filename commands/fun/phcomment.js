@@ -5,6 +5,7 @@ module.exports = {
   name: "pornhubcomment",
   aliases: ["phubcomment", "pc"],
   category: "Image",
+  group: "fun",
   description: "Return A Pornhub Comment Image!",
   usage: "Pornhubcomment <Username> <Comment>",
   run: async (client, message, args) => {
