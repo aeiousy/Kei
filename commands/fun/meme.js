@@ -1,29 +1,27 @@
-const { MessageEmbed } = require('discord.js');
-const fetch = require('node-fetch');
+const Color = "RANDOM", Fetch = require("node-fetch");
+const Discord = require("discord.js");
 
 module.exports = {
-  name: 'meme',
-  aliases: [ 'humorme' ],
-  group: 'fun',
-  description: 'Generate a random meme from a select subreddit.',
-  clientPermissions: [ 'EMBED_LINKS' ],
-  get examples(){ return [ this.name, ...this.aliases ];},
-  run: async (client, message) => {
+  name: "meme",
+  aliases: ["mm"],
+  category: "Fun",
+  group: "fun",
+  description: "Return A Random Meme!",
+  usage: "Meme",
+  run: async (client, message, args) => {
+    
+    const Response = await Fetch("https://api.darkboy.me/getmeme");
+    const Json = await Response.json();
 
-    const data = await fetch(`https://meme-api.herokuapp.com/gimme`)
-    .then(res => res.json())
-    .catch(()=>null);
+    if (!Json.title) return message.channel.send("Your Life Lmafao");
 
-    if (!data){
-      return message.channel.send(`Server Error 5xx: Meme API is currently down!`);
-    };
+    const Embed = new Discord.MessageEmbed()
+    .setColor(Color)
+    .setTitle(Json.title)
+    .setImage(Json.image)
+    .setFooter(`${Json.up} 👍 | ${Json.comments} 💬`)
+    .setTimestamp();
 
-    return message.channel.send(
-      new MessageEmbed()
-      .setColor('GREY')
-      .setImage(data.url)
-      .setAuthor(data.title, null, data.postLink)
-      .setFooter(`${data.subreddit}:Meme | \©️${new Date().getFullYear()} Kei`)
-    );
+    return message.channel.send(Embed);
   }
 };

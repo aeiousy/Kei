@@ -25,7 +25,7 @@ api.getUser({u: username}).then(user => {
 const osu = new Discord.MessageEmbed()
 .setTitle('User Osu Search System')
 .setThumbnail(`http://s.ppy.sh/a/${user.id}}`)
-.setColor("#D0436A")
+.setColor("GREY")
 .addField('Nickname', user.name)
 .addField('PP', Math.round(user.pp.raw))
 .addField('Rank', user.pp.rank)
