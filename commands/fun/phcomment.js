@@ -7,7 +7,7 @@ module.exports = {
   category: "Image",
   group: "fun",
   description: "Return A Pornhub Comment Image!",
-  usage: "Pornhubcomment <Username> <Comment>",
+  usage: "Pornhubcomment <Username> <Comment>.",
   run: async (client, message, args) => {
     
     const Username = args[0];
