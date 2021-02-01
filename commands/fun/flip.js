@@ -1,30 +1,29 @@
+const Discord = require('discord.js');
 module.exports = {
-  name: 'flip',
-  aliases: [ 'coinflip', 'coin', 'tosscoin', 'tc' ],
-  group: 'fun',
-  description: 'Win or Lose, Flip a Coin [Head or Tails]',
-  get examples(){ return [ this.name, ...this.aliases ]},
-  run: (client, message, [choice = ''] ) => {
+    name: 'coinflip',
+    aliases: ["flip"],
+    description: "Flip a Coin",
+    run: async (client, message, args) => {
 
-    if (!choice || !['head', 'tail'].some(x => choice.toLowerCase() === x)){
-      return message.channel.send(`<:cancel:767062250279927818> | ${message.author}, Please specify if \`[HEAD]\` or \`[TAILS]\``);
-    };
+        const num = (Math.random()*100)+1
 
-    let result;
-    const won = !!Math.round(Math.random());
-    const results = [ 'head', 'tail' ];
-    results.splice(results.indexOf(choice), 1);
+        const newEmbed = new Discord.MessageEmbed()
+        .setColor('GREY')
+        .setTitle('The Coin Landed on:')
+        .setImage('https://media.discordapp.net/attachments/719130456301502517/796060246132785182/Untitled_design_3.gif')
+        .setTimestamp()
+        if (num >= 0 && num <= 45) {
+            newEmbed.setDescription('Heads')
+        } else if (num > 46 && num <=91) {
+            newEmbed.setDescription('Tails')
+        } else {
+            newEmbed.setDescription('Its SIDE?!')
+        }
 
-    if (won){
-      result = choice;
-    } else {
-      [ result ] = results;
-    };
+        message.channel.send(`**${message.author.username} Flipped a Coin!**, **Choose a Side Now, you have 5 Seconds!**`)
+        setTimeout(function(){
+            message.channel.send(newEmbed);
+         }, 5000);
+    }
 
-    return message.channel.send([
-      `${message.author} tossed a coin!`,
-      `Bet: **${choice}**`,
-      `Result: **${result}** ${won ? '\\✅' : '<:cancel:767062250279927818>'}`
-    ].join('\n'));
-  }
-};
+}

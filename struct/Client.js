@@ -1,6 +1,6 @@
 'use strict';
 
-const { Client, version } = require('discord.js');
+const { Client, version, Discord } = require('discord.js');
 const { performance } = require('perf_hooks');
 const { readdirSync } = require('fs');
 const { join } = require('path');
@@ -109,7 +109,7 @@ module.exports = class KeiClient extends Client{
      * @type {ClientConfig}
      */
     this.config = {
-      prefix: settings.prefix || 'm!',
+      prefix: settings.prefix || 'kei',
       features: [],
       owners: [],
       channels: { debug: null, uploads: null, logs: null },

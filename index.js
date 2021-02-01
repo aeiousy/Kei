@@ -1,5 +1,7 @@
 // load env file (contains important keys)
 require('dotenv').config();
+const Discord = require('discord.js');
+Discord.Constants.DefaultOptions.ws.properties.$browser = "Discord Android"
 
 const Client = require(`${process.cwd()}/struct/Client`);
 const config = require(`${process.cwd()}/config`);
