@@ -14,7 +14,7 @@ const options = {
   paths: [
     'action', 'anime', 'bot',
     'core', 'fun', 'moderation',
-    'owner', 'setup', 'social','utility'
+    'owner', 'setup', 'social','utility', 'ticket'
   ]
 };
 

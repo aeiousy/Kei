@@ -21,6 +21,7 @@ module.exports = {
             .addField("**Channel Description**", `${channel.topic || "No Description"}`)
             .addField("**Channel Created At**", channel.createdAt)
             .setColor("GREY")
+            .setFooter(`ChannelInfo | \©️${new Date().getFullYear()} Kei`)
         message.channel.send(channelembed);
     }
 }
