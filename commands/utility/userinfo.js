@@ -1,51 +1,80 @@
 const { MessageEmbed } = require('discord.js');
-const moment = require('moment');
 
 module.exports = {
-  name: 'userinfo',
-  aliases: ['whois'],
-  guildOnly: true,
-  group: "utility",
-  description: 'Fetch User Information (As of May 20, 2020 - The global function has been removed due to a possible violation to Discord ToS).',
-  parameters: ['User ID'],
-  get examples(){ return [this.name, ...this.aliases].map(x => x + ' 124556789123456789')},
-  run: async(client, message, [member='']) => {
+        name: "userinfo",
+		aliases: ['user', 'whois'],
+        category: "info",
+		description: "Shows User Info",
+		usage: "[ !user-info ]",
+    run: async (client, message, args) => {
+        let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
 
-    if (!member.match(/\d{17,19}/)){
-      member = message.author.id
-    };
+        let status;
+        switch (user.presence.status) {
+            case "online":
+                status = "online";
+                break;
+            case "dnd":
+                status = "dnd";
+                break;
+            case "idle":
+                status = "idle";
+                break;
+            case "offline":
+                status = "offline";
+                break;
+        }
 
-    member = await message.guild.members
-    .fetch(member.match(/\d{17,19}/)[0])
-    .catch(() => null);
+        const embed = new MessageEmbed()
+            .setTitle(`${user.user.username} stats`)
+            .setColor(`#f3f3f3`)
+            .setThumbnail(user.user.displayAvatarURL({dynamic : true}))
+            .addFields(
+                {
+                    name: "Name: ",
+                    value: user.user.username,
+                    inline: true
+                },
+                {
+                    name: "Discriminator : ",
+                    value: `#${user.user.discriminator}`,
+                    inline: true
+                },
+                {
+                    name: "ID : ",
+                    value: user.user.id,
+                },
+                {
+                    name: "Current Status : ",
+                    value: status,
+                    inline: true
+                },
+                {
+                    name: "Activity : ",
+                    value: user.presence.activities[0] ? user.presence.activities[0].name : `User isn't playing a game!`,
+                    inline: true
+                },
+                {
+                    name: 'Avatar link : ',
+                    value: `[Click Here](${user.user.displayAvatarURL()})`
+                },
+                {
+                    name: 'Creation Date : ',
+                    value: user.user.createdAt.toLocaleDateString("en-us"),
+                    inline: true
+                },
+                {
+                    name: 'Joined Date : ',
+                    value: user.joinedAt.toLocaleDateString("en-us"),
+                    inline: true
+                },
+                {
+                    name: 'User Roles : ',
+                    value: user.roles.cache.map(role => role.toString()).join(" ,"),
+                    inline: true
+                }
+            )
 
-    if (!member){
-      return message.channel.send(`\\❌ | ${message.author}, Could not find that user in this server!`);
-    };
-
-    const user = member.user;
-    const userFlags = await user.fetchFlags()
-    .then(flags => Promise.resolve(Object.entries(flags.serialize()).filter(([_, val]) => !!val)))
-    .then(flags => flags.map(([key, _]) => client.emojis.cache.find(x => x.name === key)?.toString() || key))
-    .catch(() => []);
-
-    if (message.guild.ownerID === user.id){
-      userFlags.push('<a:GUILD_OWNER:731117984730316811>')
-    };
-
-    return message.channel.send(
-      new MessageEmbed()
-      .setColor(member.displayColor || 'GREY')
-      .setAuthor(`Discord user ${user.tag}`, null, 'https://discord.com/')
-      .setDescription(userFlags.join(' '))
-      .setThumbnail(user.displayAvatarURL({format: 'png', dynamic: true}))
-      .setFooter(`Userinfo | ©️${new Date().getFullYear()} Kei`)
-      .addFields([
-        { name: 'Username', value: `**${user.username}**#${user.discriminator}`, inline: true },
-        { name: 'Type', value: user.bot ? 'Bot' : 'User', inline: true },
-        { name: 'Joined Discord', value: moment(user.createdAt).format('dddd, do MMMM YYYY') },
-        { name: `Roles [${member.roles.cache.size - 1}]`, value: member.roles.cache.filter(r => r.id !== message.guild.id).map(x => `${x}`).splice(0,50).join(' ') || '\u200b'}
-      ])
-    );
-  }
-};
+        await message.channel.send(embed)
+    }
+}
