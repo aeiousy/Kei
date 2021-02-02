@@ -6,6 +6,7 @@ module.exports = {
         name: 'translate',
         description: 'Translate to any language using yandex translation service(only supported lanugages)',
         noalias: [""],
+        group: "utility",
         category: "info",
         usage: "[language]| next message(text)",
         accessableby: "everyone",

@@ -6,6 +6,7 @@ module.exports = {
         name: "playstore",
         aliases: ["googleplaystore", "googleps"],
         category: "info",
+        group: "utility",
         description: "Show Playstore Application Information Of Your Given Name!",
         usage: "<Application Name>",
         accessableby: "everyone",

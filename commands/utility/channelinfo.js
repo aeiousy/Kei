@@ -4,6 +4,7 @@ module.exports = {
         name: "channelinfo",
         aliases: ['ci', 'channeli', 'cinfo'],
         category: "info",
+        group: "utility",
         description: "Shows Channel Info",
         usage: "[ channel mention | channel name | ID] (optional)",
         accessableby: "everyone",

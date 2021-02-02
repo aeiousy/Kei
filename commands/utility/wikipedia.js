@@ -5,6 +5,7 @@ module.exports = {
         name: "wikipedia",
         aliases: ['wiki'],
         category: "info",
+        group: "utility",
         description: "Shows Results From Wikipedia",
         usage: "[query]",
         accessableby: "everyone",

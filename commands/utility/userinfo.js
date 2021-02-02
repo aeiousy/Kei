@@ -4,6 +4,7 @@ module.exports = {
         name: "userinfo",
 		aliases: ['user', 'whois'],
         category: "info",
+        group: "utility",
 		description: "Shows User Info",
 		usage: "[ !user-info ]",
     run: async (client, message, args) => {
