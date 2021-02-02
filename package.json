@@ -10,7 +10,7 @@
     "server": "nodemon index.js"
   },
   "engines": {
-    "node": "14.x",
+    "node": "12.x",
     "npm": "*"
   },
   "repository": {
