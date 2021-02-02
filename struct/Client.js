@@ -1,6 +1,6 @@
 'use strict';
 
-const { Client, version, Discord } = require('discord.js');
+const { Client, version } = require('discord.js');
 const { performance } = require('perf_hooks');
 const { readdirSync } = require('fs');
 const { join } = require('path');

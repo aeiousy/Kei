@@ -2,8 +2,6 @@ const settings = {
   // pass in any client configuration you want for the bot.
   // more client options can be found at
   // https://discord.js.org/#/docs/main/stable/typedef/ClientOptions
-  
-
   // Websites to monitor, accessible via client#pings
   // function must be instances of promise.
   monitorPings: {
