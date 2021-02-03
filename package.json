@@ -31,6 +31,7 @@
     "bad-words": "^3.0.4",
     "bufferutil": "^4.0.2",
     "canvas": "^2.6.1",
+    "cheerio": "^1.0.0-rc.5",
     "common-tags": "^1.8.0",
     "discord-backup": "^2.4.1",
     "discord.js": "github:monbrey/discord.js#inline-replies",
@@ -64,6 +65,7 @@
     "randomstring": "^1.1.5",
     "relevant-urban": "^2.0.0",
     "require-text": "0.0.1",
+    "simple-youtube-api": "^5.2.1",
     "sourcebin_js": "0.0.3-ignore",
     "srod-v2": "^1.0.1",
     "superagent": "^6.1.0",
@@ -72,6 +74,7 @@
     "wanakana": "^4.0.2",
     "weather-js": "^2.0.0",
     "wikijs": "^6.0.1",
+    "ytdl-core": "^4.4.5",
     "zlib-sync": "^0.1.7"
   },
   "devDependencies": {
