@@ -35,3 +35,13 @@ client.listentoProcessEvents([
 ], { ignore: false });
 
 client.login();
+
+client.on("guildCreate", async guild => {
+
+let channel = guild.channels.cache.random()
+
+let embed = new Discord.MessageEmbed() //define the Discord
+.setTitle("Thanks For Add me")
+.setColor("GREY")
+channel.send(embed)
+})

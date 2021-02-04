@@ -52,6 +52,8 @@
     "lodash": "^4.17.20",
     "mal-scraper": "^2.11.2",
     "mathjs": "^9.1.0",
+    "mojang-api": "0.0.2",
+    "mojangjs": "^2.0.3",
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2",
     "mongoose": "^5.11.8",
