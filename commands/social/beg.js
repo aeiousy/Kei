@@ -43,7 +43,7 @@ module.exports = {
         `\\✔️ **${message.member.displayName}**, You received **${amount}** from me.`,
         overflow ? `\n⚠️Overflow warning! Please deposit some of your account to your **bank**. You only received ${amount-excess} for this one!` :'',
         `\nTo Check your balance, type \`${client.prefix}bal\`\n`,
-        `Keep your wallet from *overflowing* --> <https://github.com/Keisans-Keid/Kei/wiki/Economy#Overflow)>`
+        `Keep your wallet from overflowing`
       ].join('')))
       .catch(() => message.channel.send(`\`❌ [DATABASE_ERR]:\` Unable to save the document to the database, please try again later!`));
     };

@@ -23,7 +23,6 @@ module.exports = {
       return new MessageEmbed()
       .setColor('GREY')
       .setTitle('Kei\'s Market')
-      .setDescription('You can view all of the items in the market at once on https://market.Kei-san.ml/')
       .setFooter(`Market | \©️${new Date().getFullYear()} Kei\u2000\u2000•\u2000\u2000Page ${i+1} of ${o.length}`)
       .addFields(...chunk.map(item => {
         return {
