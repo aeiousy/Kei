@@ -3,13 +3,12 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
   name: 'poke',
   aliases: [],
-  guildOnly: true,
   clientPermissions: [
     'EMBED_LINKS',
     'ADD_REACTIONS'
   ],
   group: 'action',
-  description: 'Poke your friends!',
+  description: 'Sends a roleplay gif `poke` to the chat, directed towards the mentioned user, if there is any. Usually interpreted as 「 The mentioned user ignores you, so you poke them 」. Use to indicate that you are in need of attention from the mentioned user (context may vary).',
   examples: [ 'poke @user' ],
   parameters: [ 'User Mention' ],
   run: async ( client, message, args ) => {
@@ -23,9 +22,9 @@ module.exports = {
     .setImage(url)
     .setFooter(`Action Commands | \©️${new Date().getFullYear()} Kei`);
 
-    if (!message.mentions.members.size){
+    if ((message.guild && !message.mentions.members.size) || !args[0]){
 
-      return message.channel.send(`<:cancel:767062250279927818> | ${message.author}, who am I supposed to poke?`);
+      return message.channel.send(`\\❌ **${message.author.tag}**, who am I supposed to poke?`);
 
     } else if (new RegExp(`<@!?${client.user.id}>`).test(args[0])){
 
@@ -35,7 +34,7 @@ module.exports = {
 
     } else if (new RegExp(`<@!?${message.author.id}>`).test(args[0])){
 
-      return message.channel.send(`<:cancel:767062250279927818> | No!`);
+      return message.channel.send(`\\❌ No **${message.author.tag}**!`);
 
     } else {
 

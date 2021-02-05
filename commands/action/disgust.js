@@ -3,15 +3,14 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
   name: 'disgust',
   aliases: [],
-  guildOnly: true,
   clientPermissions: [
     'EMBED_LINKS',
     'ADD_REACTIONS'
   ],
   group: 'action',
-  description: 'Mazui! Kimoi!',
-  examples: [ 'User Mention' ],
-  parameters: [],
+  description: 'Sends a roleplay gif `disgust` to the chat, directed towards the mentioned user, if there is any. Usually interpreted as 「 The user whom this command is directed to is digusting (Mazui!!, Kimoi!!) 」. Use to indicate that you are disgusted by their (ideas on their) previous chats. May be used in a similar context to the emoji 🤮.',
+  examples: [ 'disgust @user' ],
+  parameters: [ 'User Mention' ],
   run: async ( client, message, args ) => {
 
     // Filter out args so that args are only user-mention formats.
@@ -23,7 +22,7 @@ module.exports = {
     .setImage(url)
     .setFooter(`Action Commands | \©️${new Date().getFullYear()} Kei`);
 
-    if (!message.mentions.members.size){
+    if (message.guild && !message.mentions.members.size){
 
       return message.channel.send(embed.setDescription(`${message.member} is disgusted..`));
 
@@ -33,7 +32,7 @@ module.exports = {
 
     } else if (new RegExp(`<@!?${message.author.id}>`).test(args[0])){
 
-      return message.channel.send(embed.setDescription(`${message.member} is disgusted..`));
+      return message.channel.send(embed.setDescription(`${message.author} is disgusted..`));
 
     } else {
 

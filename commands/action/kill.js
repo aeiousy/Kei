@@ -3,19 +3,19 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
   name: 'kill',
   aliases: [],
-  guildOnly: true,
+  nsfw: true,
   clientPermissions: [
     'EMBED_LINKS',
     'ADD_REACTIONS'
   ],
   group: 'action',
-  description: 'Kill someone.',
+  description: 'Sends a roleplay gif `kill` to the chat, directed towards the mentioned user, if there is any. Usually interpreted as 「 The user who used this command wants to kill the mentioned user 」. Use to indicate that you are / wanted to kill the mentioned user (context may vary). This is a roleplay command and is meant to be used as a joke, however, this will be limited to a nsfw channel due to sensitive nature of this command. Context should not include real crimes.',
   examples: [ 'kill @user' ],
   parameters: [ 'User Mention' ],
   run: async ( client, message, args ) => {
 
     // Filter out args so that args are only user-mention formats.
-    ags = args.filter(x => /<@!?\d{17,19}>/.test(x))
+    args = args.filter(x => /<@!?\d{17,19}>/.test(x));
 
     const url = client.images.kill();
     const embed = new MessageEmbed()

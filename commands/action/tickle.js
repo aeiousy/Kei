@@ -3,13 +3,12 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
   name: 'tickle',
   aliases: [],
-  guildOnly: true,
   clientPermissions: [
     'EMBED_LINKS',
     'ADD_REACTIONS'
   ],
   group: 'action',
-  description: 'Tickle your friends!',
+  description: 'Sends a roleplay gif `tickle` to the chat, directed towards the mentioned user, if there is any. Usually interpreted as 「 The user whom this command is directed to has been tickled 」. Use to indicate that you tickled the mentioned user (context may vary).',
   examples: [ 'tickle @user' ],
   parameters: ['User Mention'],
   run: async ( client, message, args ) => {
@@ -23,24 +22,24 @@ module.exports = {
     .setImage(url)
     .setFooter(`Action Commands | \©️${new Date().getFullYear()} Kei`);
 
-    if (!message.mentions.members.size){
+    if ((message.guild && !message.mentions.members.size) || !args[0]){
 
       return message.channel.send(embed);
 
     } else if (new RegExp(`<@!?${client.user.id}>`).test(args[0])){
 
       return message.channel.send(
-        embed.setDescription(`Stop ${message.member}! It tickles~`)
+        embed.setDescription(`Stop ${message.author}! It tickles~`)
       );
 
     } else if (new RegExp(`<@!?${message.author.id}>`).test(args[0])){
 
-      return message.channel.send(`<:cancel:767062250279927818> | Have fun tickling yourself ${message.author}!`);
+      return message.channel.send(`\\❌ Have fun tickling yourself **${message.author.tag}**!`);
 
     } else {
 
       return message.channel.send(
-        embed.setDescription(`${message.member} tickled ${args[0]}`)
+        embed.setDescription(`${message.author} tickled ${args[0]}`)
       );
 
     };
