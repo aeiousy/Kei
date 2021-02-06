@@ -40,7 +40,7 @@ client.login();
 client.on("guildCreate", guild => {
     const channels = guild.channels.cache.filter(channel => channel.type == "text");
 
-    channels.first().send("Hi there, I'm **Kei!** Thanks for adding me to your server.").catch(e => console.log(e));
+    channels.first().send("Hi there, I'm **Kei!** Thanks for adding me to your server. \n\n").catch(e => console.log(e));
 
     channels.first().send("Do `kei help` to get a list of commands, and `kei help <command>` to see more information about a command.").catch(e => console.log(e));
 
