@@ -29,6 +29,7 @@ client.defineCollections([ 'discovery', 'economy', 'memes', 'xp' ]);
 // let client listen to process events, setting ignore to true will
 // ignore errors and not execute the functions from util/processEvents.js.
 // Available process events on https://nodejs.org/api/process.html#process_process_events
+//If you need help, or find a bug: Join our support server at https://discord.gg/uFTvyB22RX
 client.listentoProcessEvents([
   'unhandledRejection',
   'uncaughtException'
@@ -36,12 +37,12 @@ client.listentoProcessEvents([
 
 client.login();
 
-client.on("guildCreate", async guild => {
+client.on("guildCreate", guild => {
+    const channels = guild.channels.cache.filter(channel => channel.type == "text");
 
-let channel = guild.channels.cache.random()
+    channels.first().send("Hi there, I'm **Kei!** Thanks for adding me to your server.").catch(e => console.log(e));
 
-let embed = new Discord.MessageEmbed() //define the Discord
-.setTitle("Thanks For Add me")
-.setColor("GREY")
-channel.send(embed)
-})
+    channels.first().send("Do `kei help` to get a list of commands, and `kei help <command>` to see more information about a command.").catch(e => console.log(e));
+
+    channels.first().send("If you need help, or find a bug: Join our support server at https://discord.gg/uFTvyB22RX").catch(e => console.log(e));
+});
