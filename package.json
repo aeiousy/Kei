@@ -25,6 +25,7 @@
   "author": "aeiousy#4774",
   "license": "MIT",
   "dependencies": {
+    "@ksoft/api": "^3.1.9",
     "@sentry/node": "^6.0.3",
     "@top-gg/sdk": "^3.0.5",
     "animequotes": "^1.1.2",

@@ -1,4 +1,4 @@
-const Color = "RANDOM", Fetch = require("node-fetch");
+const Color = "GREY", Fetch = require("node-fetch");
 const Discord = require("discord.js");
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
   description: "Return A Random Meme!",
   usage: "Meme",
   run: async (client, message, args) => {
-    
+
     const Response = await Fetch("https://api.darkboy.me/getmeme");
     const Json = await Response.json();
 
