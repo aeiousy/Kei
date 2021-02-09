@@ -1,18 +1,21 @@
 const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
-const constants = require(`${process.cwd()}/util/constants.js`);
+const constants = require('../../util/constants.js');
 
 module.exports = {
   name: 'serverinfo',
   aliases: [ 'guild', 'server', 'serverstat', 'serverstats', 'guildstat', 'guildstats' ],
   group: 'utility',
   guildOnly: true,
-  get examples(){ return [ this.name, ...this.aliases ];},
+  description: 'Displays the basic information of the server',
+  examples: [
+    'serverinfo'
+  ],
   run: async (client, message) => message.channel.send(
     new MessageEmbed()
     .setColor('GREY')
     .setAuthor(`♨️ ${message.guild.name} Server Information`, message.guild.iconURL())
-    .setFooter(`Server | ©️${new Date().getFullYear()} Kei`)
+    .setFooter(`Server | ©️${new Date().getFullYear()} Mai`)
     .addFields([
       {
         name: '__**SERVER**__', inline: true,
