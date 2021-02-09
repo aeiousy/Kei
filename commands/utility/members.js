@@ -22,8 +22,8 @@ module.exports = {
 
     const Embed = new Discord.MessageEmbed()
     .setColor("GREY")
-    .setTitle("Members Information!")
-    .setDescription(`Total - **${message.guild.memberCount}**\nHuman - **${Humans.size}**\nBots - **${Bots.size}**\nOnline - **${Online.size}** | Idle - **${Idle.size}** | Do Not Distrub - **${Dnd.size}** | Offline - **${Offline.size}**\nPlaying - **${Players.size}**\nDiscord In Website - **${Websites.size}** | Desktop - **${Desktop.size}** | Mobile - **${Mobile.size}**\nSame Discriminator - **${SameTag}**`)
+    .setTitle("Members Count!")
+    .setDescription(`Total - **${message.guild.memberCount}**`)
     .setFooter(`Members | \©️${new Date().getFullYear()} Kei`)
     .setTimestamp();
 
