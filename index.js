@@ -3,6 +3,8 @@ require('dotenv').config();
 const Discord = require('discord.js');
 Discord.Constants.DefaultOptions.ws.properties.$browser = "Discord Android"
 
+const fs = require('fs');
+
 const Client = require(`${process.cwd()}/struct/Client`);
 const config = require(`${process.cwd()}/config`);
 
@@ -13,12 +15,14 @@ const options = {
   log: true,
   paths: [
     'action', 'anime', 'bot',
-    'core', 'fun', 'moderation',
+    'core', 'fun', 'moderation', 'music',
     'owner', 'setup', 'social','utility', 'ticket'
   ]
 };
 
 client.database?.init();
+
+client.musicPlayer?.init();
 
 client.loadCommands({ parent: 'commands', ...options });
 
@@ -29,7 +33,6 @@ client.defineCollections([ 'discovery', 'economy', 'memes', 'xp' ]);
 // let client listen to process events, setting ignore to true will
 // ignore errors and not execute the functions from util/processEvents.js.
 // Available process events on https://nodejs.org/api/process.html#process_process_events
-//If you need help, or find a bug: Join our support server at https://discord.gg/uFTvyB22RX
 client.listentoProcessEvents([
   'unhandledRejection',
   'uncaughtException'

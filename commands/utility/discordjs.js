@@ -28,7 +28,7 @@ module.exports = {
                         "color": 0x4D5E94,
                         "author": {
                             "name": "Discord.js Docs (master)",
-                            "url": "https://discord.js.org/#/docs/main/master",
+                            "url": "https://discord.js.org/#/docs/Kein/master",
                             "icon_url": "https://discord.js.org/favicon.ico"
                         },
                         "title": "Search results:",
@@ -40,7 +40,7 @@ module.exports = {
             })
             .catch(e => {
                 message.channel.send({
-                    embed: { "color": 0x4D5E94, "author": { "name": "Discord.js Docs (master)", "url": "https://discord.js.org/#/docs/main/master", "icon_url": "https://discord.js.org/favicon.ico" }, "title": "Search results:", "description": "No results." }
+                    embed: { "color": 0x4D5E94, "author": { "name": "Discord.js Docs (master)", "url": "https://discord.js.org/#/docs/Kein/master", "icon_url": "https://discord.js.org/favicon.ico" }, "title": "Search results:", "description": "No results." }
                 });
             });
     }
