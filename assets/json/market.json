@@ -1046,7 +1046,7 @@
   },{
     "id": 95,
     "name": "Rengoku",
-    "description": "very very very very rare profile background",
+    "description": "very very very very rare profile background.",
     "type": "background",
     "deletable": true,
     "giftable": true,
@@ -1057,7 +1057,7 @@
   },{
     "id": 96,
     "name": "Rengoku pattern",
-    "description": "very very very very rare profile pattern",
+    "description": "very very very very rare profile pattern.",
     "type": "pattern",
     "deletable": true,
     "giftable": true,
