@@ -1,25 +1,21 @@
-const Color = "GREY";
-const Discord = require("discord.js");
-
+const Discord = require('discord.js');
 module.exports = {
-  name: "avatar",
-  aliases: ["icon", "pfp"],
-  category: "Fun",
-  group: "utility",
-  description: "Return A User Avatar!",
-  usage: "Avatar | <Mention Or ID>",
-  run: async (client, message, args) => {
-    
-    const Member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
-    const Gif = Member.user.displayAvatarURL({ format: "gif" }), Webp = Member.user.displayAvatarURL({ format: "webp" }), Png = Member.user.displayAvatarURL({ format: "png" }), Jpg = Member.user.displayAvatarURL({ format: "jpg" })
+        name: 'avatar',
+        description: 'Show user avatar',
+        aliases: ["av", "pfp", "icon"],
+        usage: '',
+        accessableby: "",
+    run: async (client, message, args) => {
 
-    const Embed = new Discord.MessageEmbed()
-    .setColor(Color)
-    .setDescription(`[Png](${Png}) - [Gif](${Gif}) - [Webp](${Webp}) - [Jpg](${Jpg})`)
-    .setImage(Member.user.displayAvatarURL({ dynamic: true, size: 4096 }))
-    .setFooter(`Avatar | \©️${new Date().getFullYear()} Kei`)
-    .setTimestamp();
+        const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.member;
+    const embed = new Discord.MessageEmbed()
+        .setColor("GREY")
+        .setTitle(`**Avatar**`)
+        .setDescription(`\`Links:\` **[png](${member.user.displayAvatarURL({format: "png", size: 4096})}) | [jpg](${member.user.displayAvatarURL({format: "jpg", size: 4096})}) | [gif](${member.user.displayAvatarURL({format: "gif", size: 4096, dynamic: true})}) | [webp](${member.user.displayAvatarURL({format: "webp", size: 4096})})**`)
+        .setImage(member.user.displayAvatarURL({ dynamic: true, size: 4096 }))
+        .setFooter(`Avatar | \©️${new Date().getFullYear()} Kei`)
+        .setTimestamp()
+    return message.channel.send(embed)
 
-    return message.channel.send(Embed);
-  }
-};
+    }
+}
