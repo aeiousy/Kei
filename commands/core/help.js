@@ -35,7 +35,7 @@ module.exports = {
 
             .addField(
               "\u200B",
-              `Use \`${prefix}cmd\` to see a list of my commands.\nYou can also use \`${prefix}help [command]\` to get help on a specific command. \`use /help for music commands\``
+              `Use \`${prefix}cmd\` to see a list of my commands.\nYou can also use \`${prefix}help [command]\` to get help on a specific command. \`use /help for advance music commands\``
             )
         )
         .catch(() => message.react("👎"));

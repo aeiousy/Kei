@@ -1043,5 +1043,27 @@
     "assets": {
       "link": "https://i.imgur.com/ffH9gnI.png"
     }
+  },{
+    "id": 95,
+    "name": "Rengoku",
+    "description": "very very very very rare profile background",
+    "type": "background",
+    "deletable": true,
+    "giftable": true,
+    "price": 50000,
+    "assets": {
+      "link": "https://i.imgur.com/DQtLVw5.jpg"
+    }
+  },{
+    "id": 96,
+    "name": "Rengoku pattern",
+    "description": "very very very very rare profile pattern",
+    "type": "pattern",
+    "deletable": true,
+    "giftable": true,
+    "price": 50000,
+    "assets": {
+      "link": "https://i.imgur.com/Pzy5P63.png"
+    }
   }
 ]
