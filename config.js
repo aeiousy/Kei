@@ -79,17 +79,4 @@ const settings = {
   // owner based commands.
   owners: [ '684087663090728983' ],
 
-  // websites affiliated with the bot, can be accessed through
-  // Client#config#websites
-  websites: {
-    "repository":"https://github.com/aeiousy/Kei/",
-    "website": "https://keibot.xyz",
-    "invite": "https://invite.mai-san.ml/",
-    "support": "https://support.mai-san.ml/",
-    "docs": "https://mai-san.ml/docs/getting%20started/welcome/",
-    "top.gg": "https://top.gg/bot/702074452317307061/",
-    "DBL": "https://discordbotlist.com/bots/mai-3909/"
-  }
-};
-
 module.exports = settings;
