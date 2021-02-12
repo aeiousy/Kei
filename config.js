@@ -78,6 +78,9 @@ const settings = {
   // Array of owners recognized by the bot. ID here will be given access to
   // owner based commands.
   owners: [ '684087663090728983' ],
+<<<<<<< HEAD
 };
+=======
+>>>>>>> 2fd41c693018ba759b7275edb8357d4336a04aad
 
 module.exports = settings;
